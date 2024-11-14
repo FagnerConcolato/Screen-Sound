@@ -50,6 +50,8 @@ void ExibirOpcoesDoMenu()
             break;
         default:
             Console.WriteLine("Opção Inválida");
+            Console.Clear();
+            ExibirOpcoesDoMenu();
             break;
     }
 }
@@ -105,10 +107,7 @@ void AvaliarUmaBanda()
     else
     {
         Console.WriteLine($"A banda {nomeDaBanda} nao foi escontrada");
-        Console.Write("digite uma tecla para voltar para o menu principal");
-        Console.ReadKey();
-        Console.Clear();
-        ExibirOpcoesDoMenu();
+        LimparEvoltarParaAsOpçoesDoMenu();
     }
 
 }
@@ -137,9 +136,6 @@ void listarNotasDasBandas()
 
 void MostrarAmediaDaBanda()
 {
-    //verificar se abanda existe 
-    //MostrarAmediaDaBanda a media 
-
     Console.Clear();
     ExibirTituloDaOpcao("Exibindo a Média por Banda!");
     Console.WriteLine("Digite o Nome da banda para ver a sua respectiva média:");
@@ -165,34 +161,6 @@ void MostrarAmediaDaBanda()
         Console.WriteLine("Essa Banda nao foi cadastradas");
         LimparEvoltarParaAsOpçoesDoMenu();
     }
-
-   
-    
-
-    //foreach (string banda in bandasRegistradas.Keys)
-
-    //{
-     
-    //    Console.WriteLine($"Banda: {banda}");
-    //    List<double> notas = bandasRegistradas[banda];
-    //    if (notas.Count > 0)
-    //    {
-    //        Console.WriteLine($"Media final {notas.Average()}");
-
-    //    }
-    //    else
-    //    {
-
-    //        Console.WriteLine("Nenhuma nota adicionada para essa banda");
-               
-    //    }
-
-    //}
-
-    //Console.Write("\nDigite uma tecla para voltar para o menu");
-    //Console.ReadKey();
-    //Console.Cle
-
 }
 
 
